@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "5AcLt9ofD3qZhsijV2KzUb1+d+tv5r5+L4mrX1jQ2sUBUbyVbzkF96ss2kBUXmqslOLKzGQ7WEuLcdCy4n8yug==",
+  "dgSpecHash": "gdP8ooPQzrEbLchD3em0kIrvEuDWZS5xf23nxZxeklwgemQqvuq6+NJ34Chp9ujUaDXLdC9UxhVJumlMF3EM+w==",
   "success": true,
   "projectFilePath": "/home/luciano/workspace/creditCardApi/creditCardApi.csproj",
   "expectedPackageFiles": [
     "/home/luciano/.nuget/packages/microsoft.entityframeworkcore/5.0.6/microsoft.entityframeworkcore.5.0.6.nupkg.sha512",
     "/home/luciano/.nuget/packages/microsoft.entityframeworkcore.abstractions/5.0.6/microsoft.entityframeworkcore.abstractions.5.0.6.nupkg.sha512",
     "/home/luciano/.nuget/packages/microsoft.entityframeworkcore.analyzers/5.0.6/microsoft.entityframeworkcore.analyzers.5.0.6.nupkg.sha512",
+    "/home/luciano/.nuget/packages/microsoft.entityframeworkcore.inmemory/5.0.6/microsoft.entityframeworkcore.inmemory.5.0.6.nupkg.sha512",
     "/home/luciano/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/home/luciano/.nuget/packages/microsoft.extensions.caching.abstractions/5.0.0/microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "/home/luciano/.nuget/packages/microsoft.extensions.caching.memory/5.0.0/microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
