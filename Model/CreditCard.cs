@@ -13,5 +13,7 @@ namespace creditCardApi.Models
         [Required(ErrorMessage = "Esse campo é obrigatorio")]
         [EmailAddress(ErrorMessage = "O email inserido é invalido")]
         public string email { get; set; }
+
+        private string cardNumber { get; set; }
     }
 }
