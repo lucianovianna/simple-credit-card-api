@@ -5,7 +5,7 @@ namespace creditCardApi.Models
 {
 
 
-    public class Category
+    public class CreditCard
     {
         [Key]
         public int id { get; set; }
