@@ -14,6 +14,6 @@ namespace creditCardApi.Models
         [EmailAddress(ErrorMessage = "O email inserido é invalido")]
         public string email { get; set; }
 
-        private string cardNumber { get; set; }
+        public string cardNumber { get; set; }
     }
 }
