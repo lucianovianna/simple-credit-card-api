@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -14,17 +15,9 @@ namespace creditCardApi.Controllers
     [Route("api/[Controller]")]
     public class CreditCardController : ControllerBase
     {
-        // [HttpGet]
-        // [Route("{email:string}")]
-        // public async Task<ActionResult<List<Category>>> Get([FromServices] DataContext context)
-        // {
-        //     var categories = await context.Categories.ToListAsync();
-        //     return categories;
-        // }
-
         [HttpPost]
         [Route("generate")]
-        public async Task<ActionResult<CreditCard>> Post(
+        public async Task<ActionResult<String>> Post(
             [FromServices] DataContext context,
             [FromBody] CreditCard model)
         {
@@ -35,12 +28,29 @@ namespace creditCardApi.Controllers
                 context.CreditCards.Add(model);
                 await context.SaveChangesAsync();
 
-                return model;
+                return model.cardNumber;
             }
             else
             {
                 return BadRequest(ModelState);
             }
+        }
+
+        [HttpGet]
+        [Route("list/{email:maxlength(50)}")]
+        public async Task<ActionResult<List<String>>> GetByEmail([FromServices] DataContext context, string email)
+        {
+            // var creditCards = await (from obj in context.CreditCards
+            //                         where obj.email == email
+            //                         select obj.cardNumber).ToListAsync();
+
+            var creditCards = await context.CreditCards
+                .Where(o => o.email == email)
+                .Select(o => o.cardNumber)
+                .ToListAsync();
+
+            return creditCards;
+
         }
 
     }
